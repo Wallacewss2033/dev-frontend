@@ -1,0 +1,18 @@
+
+$primary: #12123C;
+$success: #9AC31C;
+$info: #16BECF;
+$link-color: #16BECF;
+
+$theme-colors: (
+  "primary":    $primary,
+  "success":    $success,
+  "info":       $info,
+  "link-color": $link-color,
+);
+
+$custom-colors:();
+
+$theme-colors: map-merge($theme-colors , $custom-colors );
+
+@import '../node_modules/bootstrap/scss/bootstrap';
