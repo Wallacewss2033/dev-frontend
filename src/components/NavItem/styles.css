@@ -1,0 +1,18 @@
+.text-align{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.text-align .custom {
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left; 
+}
+
+.icon {
+    font-size: 10px;
+}
