@@ -3,7 +3,7 @@ import "./styles.css";
 
 interface ButtonInterface
   extends ButtonHTMLAttributes<HTMLButtonElement> {
-  btnType: "outline-white" | "success" | "white";
+  btnType: "outline-white" | "success" | "white" | "outline-success";
   radius?: number;
 }
 
