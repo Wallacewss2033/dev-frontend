@@ -1,0 +1,54 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 700px;
+  background-image: url("../../assets/banner-doctor.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner span h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: white;
+}
+
+.box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 709px;
+}
+
+.box-text .subtitle {
+  text-align: center;
+  width: 550px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #ffffff;
+  opacity: 75%;
+}
+
+.text-button {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8px;
+  text-align: center;
+}
+
+.text-aquamarine {
+  color: #8ce5e1;
+}
+
+.image-designer {
+  position: absolute;
+  top: 400px;
+  left: 0;
+}
