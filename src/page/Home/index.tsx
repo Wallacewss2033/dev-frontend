@@ -5,6 +5,7 @@ import dep from "../../assets/depoimentos.png";
 import Banner from "../../components/Banner";
 import "./styles.css";
 import Button from "../../components/Button";
+import Form from "../../components/Form";
 
 const Home: React.FC = () => {
   return (
@@ -111,6 +112,18 @@ const Home: React.FC = () => {
                 significativo e aplicável no contexto profissional.
               </li>
             </ol>
+            <br />
+            </div>
+            <div className="box-contact d-flex row-cols-2">
+              <div className="box-form">
+                <p className="title-form">Cadastre-se para receber mais informações e conteúdos</p>
+                <Form/>
+              </div>
+              <div className="box-send-message">
+                
+              </div>
+            </div>
+            <div className="box-info">
             <br />
             <h2 className="text-primary">
               Como o PBL é aplicado no curso de Medicina?

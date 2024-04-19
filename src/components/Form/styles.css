@@ -1,0 +1,28 @@
+form {
+  font-size: 12px !important;
+}
+
+form input {
+  font-size: 12px !important;
+}
+
+form select {
+  font-size: 12px !important;
+}
+
+.text-form {
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 9.6px;
+  text-align: left;
+  width: 300px;
+}
+
+form div {
+    margin-top: 4px !important;
+}
+
+.form-check-input:checked {
+    background-color: #9AC31C;
+    border-color: #9AC31C;
+}
