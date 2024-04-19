@@ -1,15 +1,17 @@
 import React from "react";
 import image from "../../assets/Vector.png";
-import imageTwo from "../../assets/Vector.png";
+import imageTwo from "../../assets/VectorTwo.svg";
+import dep from "../../assets/depoimentos.png";
 import Banner from "../../components/Banner";
 import "./styles.css";
 import Button from "../../components/Button";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <Banner />
       <img className="image-designer" src={image} />
+
       <div className="d-flex justify-content-center">
         <div className="container-info">
           <div className="box-info">
@@ -200,32 +202,71 @@ const Home: React.FC = () => {
             </p>
 
             <strong className="text-info mb-2">Mantenha-se Curioso</strong>
-            <p>Cultive a curiosidade! Explore além do óbvio, faça perguntas e
-            busque respostas. A busca por novos conhecimentos e o interesse
-            genuíno pela medicina o ajudarão a se destacar como estudante e
-            profissional do futuro.</p>
-            
+            <p>
+              Cultive a curiosidade! Explore além do óbvio, faça perguntas e
+              busque respostas. A busca por novos conhecimentos e o interesse
+              genuíno pela medicina o ajudarão a se destacar como estudante e
+              profissional do futuro.
+            </p>
+
             <strong className="text-info mb-2">
               Estabeleça Parcerias de Estudo
             </strong>
-            <p>A colaboração é um dos pilares do PBL. Forme parcerias de estudo com
-            seus colegas, compartilhe recursos e informações relevantes. O
-            trabalho em equipe enriquece o processo de aprendizagem e estimula a
-            troca de experiências.</p>
-            
+            <p>
+              A colaboração é um dos pilares do PBL. Forme parcerias de estudo
+              com seus colegas, compartilhe recursos e informações relevantes. O
+              trabalho em equipe enriquece o processo de aprendizagem e estimula
+              a troca de experiências.
+            </p>
+
             <strong className="text-info mb-2">Busque Feedback</strong>
-            <p>Esteja aberto a receber feedback construtivo dos seus professores e
-            preceptores. A orientação de profissionais experientes o ajudará a
-            aprimorar suas habilidades clínicas e acadêmicas.</p>
-            
+            <p>
+              Esteja aberto a receber feedback construtivo dos seus professores
+              e preceptores. A orientação de profissionais experientes o ajudará
+              a aprimorar suas habilidades clínicas e acadêmicas.
+            </p>
+
             <strong className="text-info mb-2">Conecte Teoria e Prática</strong>
-            <p>Ao estudar os casos propostos, busque entender como os conceitos
-            teóricos se aplicam à prática médica. A integração entre teoria e
-            prática é essencial para um aprendizado significativo e uma formação
-            médica completa.</p>
+            <p>
+              Ao estudar os casos propostos, busque entender como os conceitos
+              teóricos se aplicam à prática médica. A integração entre teoria e
+              prática é essencial para um aprendizado significativo e uma
+              formação médica completa.
+            </p>
           </div>
+          <div className="box-testimonial">
+            <div className="d-flex row">
+              <div className="col-4"></div>
+              <div className="col-8">
+                <h1>
+                  Ninguém melhor para reconhecer a nossa excelência: nosso
+                  estudante
+                </h1>
+                <span>
+                  O que nossos alunos e alunas falam sobre a experiência de
+                  cursar medicina na Unex. Lorem ipsum dolor sit amet consectum
+                  dolor. Pregnam consectum lorem ipsum dolor sit amet consectum
+                  dolor. Pregnam consectum.
+                </span>
+              </div>
+            </div>
+
+            <img
+              alt="teste01"
+              src={dep}
+              style={{ position: "relative", top: -224 }}
+            />
+
+          </div>
+          <div className="d-flex justify-content-center aling-item-center">
+              <Button btnType="outline-success" radius={25}>
+                <span className="text-black"><b>Leia mais depoimentos</b></span>
+              </Button>
+            </div>
         </div>
       </div>
+
+      <img className="image-designer-two" src={imageTwo} />
     </div>
   );
 };
