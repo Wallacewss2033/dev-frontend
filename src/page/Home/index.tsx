@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   return (
     <div style={{ width: "100%" }}>
       <Banner />
-      <img className="image-designer" src={image} />
+      <img className="image-designer" src={image} alt="designer"/>
 
       <div className="d-flex justify-content-center">
         <div className="container-info">
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
               Por meio da PBL, os nossos estudantes mergulham na resolução de
               problemas reais, situações comuns encontradas na prática médica.
               Apoiados por
-              <a href="#" className="link-info">
+              <a href="/#" className="link-info">
                 professores experientes
               </a>
               que os auxiliam a assimilar informações essenciais, eles aprendem
@@ -44,6 +44,7 @@ const Home: React.FC = () => {
             width="100%"
             height={600}
             frameBorder="0"
+            title="Metodologia PBL"
             src="https://www.youtube.com/embed/QTi78E7CrGA"
           />
 
@@ -131,7 +132,7 @@ const Home: React.FC = () => {
             <br />
             <p>
               O método PBL é empregado nos Tutoriais, uma das principais
-              <a href="#" className="link-info">
+              <a href="/#" className="link-info">
                 disciplinas do curso
               </a>
               , incorporando diversas atividades que proporcionam uma
@@ -162,7 +163,7 @@ const Home: React.FC = () => {
               O desenvolvimento dessas habilidades essenciais contribui para a
               formação de profissionais capacitados e preparados para atuar com
               sucesso na{" "}
-              <a href="#" className="link-info">
+              <a href="/#" className="link-info">
                 carreira médica
               </a>
               , oferecendo cuidados de qualidade e contribuindo positivamente
@@ -279,7 +280,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <img className="image-designer-two" src={imageTwo} />
+      <img className="image-designer-two" src={imageTwo} alt="designer-two"/>
     </div>
   );
 };

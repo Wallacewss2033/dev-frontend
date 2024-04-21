@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../../assets/logo.png";
 import NavItem from "../NavItem";
 import "./styles.css";
 import Button from "../Button";
 
-interface NavItem {
-  text: string;
-  drop: boolean;
-}
 
 const Header: React.FC = () => {
-  const navItems: NavItem[] = [
+  const navItems = [
     { text: "Inicio", drop: false },
     { text: "Ensino", drop: true },
     { text: "Estrutura", drop: true },
@@ -31,8 +27,8 @@ const Header: React.FC = () => {
           >
             <span className="navbar-text me-5">
               <ul className="navbar-nav">
-                {navItems.map((item) => {
-                  return <NavItem text={item.text} drop={item.drop} />;
+                {navItems.map((item, index) => {
+                  return <NavItem key={index} text={item.text} drop={item.drop} />;
                 })}
               </ul>
             </span>
