@@ -30,3 +30,13 @@ form div {
 form i {
   font-size: 20px;
 }
+
+.Toastify__progress-bar--success {
+  background-color: #9AC31C !important;
+}
+
+.Toastify__toast-icon--success {}
+
+.Toastify__toast-body svg {
+  fill: #9AC31C; /* Define a cor do ícone */
+}

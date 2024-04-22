@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import Button from "../Button";
-import { string, z } from "zod";
+import { z } from "zod";
 import { maskCpf, maskPhone } from "../../hooks/mask";
 import api from "../../services/api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Form: React.FC = () => {
   interface formInterface {
@@ -107,6 +109,14 @@ const Form: React.FC = () => {
     setErrors({});
   };
 
+  const handleResetInputs = () => {
+    setCpf('');
+    setEmail('');
+    setName('');
+    setPhone('');
+    setIsChecked(false);
+  };
+
   useEffect(() => {
     setErrors({});
   }, [
@@ -115,13 +125,6 @@ const Form: React.FC = () => {
     validateName.success,
     validatePhone.success,
   ]);
-
-  console.log(
-    validateCpf.success,
-    validateName.success,
-    validateEmail.success,
-    validatePhone.success
-  );
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -141,7 +144,8 @@ const Form: React.FC = () => {
     api
       .post("/lead", data)
       .then((response) => {
-        console.log(response.data);
+        toast.success(response.data.message);
+        handleResetInputs();
       })
       .catch((errors) => {
         setErrors(errors.response.data.errors);
@@ -159,7 +163,7 @@ const Form: React.FC = () => {
           <option>...</option>
         </select>
       </div>
-
+      <ToastContainer />
       <div className="col-md-12">
         <label className="form-label">CPF</label>
         <div className="d-flex align-items-center">
