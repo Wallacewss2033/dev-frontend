@@ -2,6 +2,7 @@ import React from "react";
 import image from "../../assets/Vector.png";
 import imageTwo from "../../assets/VectorTwo.svg";
 import dep from "../../assets/depoimentos.png";
+import maneger from "../../assets/coordenador.png";
 import Banner from "../../components/Banner";
 import "./styles.css";
 import Button from "../../components/Button";
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <div style={{ width: "100%" }}>
       <Banner />
-      <img className="image-designer" src={image} alt="designer"/>
+      <img className="image-designer" src={image} alt="designer" />
 
       <div className="d-flex justify-content-center">
         <div className="container-info">
@@ -114,17 +115,30 @@ const Home: React.FC = () => {
               </li>
             </ol>
             <br />
+          </div>
+          <div className="box-contact d-flex row-cols-2">
+            <div className="box-form">
+              <p className="title-form">
+                Cadastre-se para receber mais informações e conteúdos
+              </p>
+              <Form />
             </div>
-            <div className="box-contact d-flex row-cols-2">
-              <div className="box-form">
-                <p className="title-form">Cadastre-se para receber mais informações e conteúdos</p>
-                <Form/>
+            <div className="box-send-message">
+              <p className="title-contact">
+                Tire suas dúvidas com o Coordenador do Curso de Medicina sobre a
+                Metodologia PBL
+              </p>
+              <div className="mt-4">
+                <img alt="coordenador" src={maneger} />
               </div>
-              <div className="box-send-message">
-                
-              </div>
+              <span className="mt-4">
+                <Button style={{padding: '10px 18px', width: 190, borderRadius: 25}} type="button" btnType="white">
+                  <b> Enviar mensagem </b>
+                </Button>
+              </span>
             </div>
-            <div className="box-info">
+          </div>
+          <div className="box-info">
             <br />
             <h2 className="text-primary">
               Como o PBL é aplicado no curso de Medicina?
@@ -270,17 +284,18 @@ const Home: React.FC = () => {
               src={dep}
               style={{ position: "relative", top: -224 }}
             />
-
           </div>
           <div className="d-flex justify-content-center aling-item-center">
-              <Button btnType="outline-success" radius={25}>
-                <span className="text-black"><b>Leia mais depoimentos</b></span>
-              </Button>
-            </div>
+            <Button btnType="outline-success" radius={25}>
+              <span className="text-black">
+                <b>Leia mais depoimentos</b>
+              </span>
+            </Button>
+          </div>
         </div>
       </div>
 
-      <img className="image-designer-two" src={imageTwo} alt="designer-two"/>
+      <img className="image-designer-two" src={imageTwo} alt="designer-two" />
     </div>
   );
 };

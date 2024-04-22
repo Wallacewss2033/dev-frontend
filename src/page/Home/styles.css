@@ -87,13 +87,15 @@
 
 .box-send-message {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 435px;
   height: 687px;
   background-image: url("../../assets/bg-form.png");
   background-size: cover;
   background-position: center;
+  flex-direction: column;
+  padding: 60px 54px;
 }
 
 .box-form {
@@ -117,4 +119,13 @@
   font-weight: 500;
   line-height: 27px;
   text-align: center;
+}
+
+.title-contact {
+  max-width: 318px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
 }
