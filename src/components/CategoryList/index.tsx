@@ -9,13 +9,13 @@ const CategoryList: React.FC<CategoryInterface> = ({categories}) => {
       {categories.map((category, index) => {
         if (index !== categories.length - 1) {
           return (
-            <span className="text-white">
+            <span key={index} className="text-white">
               <span className="text-aquamarine mx-2">{` ${category} `}</span>/
             </span>
           );
         }
 
-        return <span className="text-white mx-2">{`${category}`}</span>;
+        return <span key={index} className="text-white mx-2">{`${category}`}</span>;
       })}
     </p>
   );

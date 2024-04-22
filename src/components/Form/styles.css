@@ -26,3 +26,7 @@ form div {
     background-color: #9AC31C;
     border-color: #9AC31C;
 }
+
+form i {
+  font-size: 20px;
+}

@@ -19,9 +19,9 @@ const Button: React.FC<ButtonInterface> = ({
       className={`btn btn-${btnType}`}
       {...props}
     >
-      <div className="d-flex justify-content-evenly align-items-center">
+      <span className="d-flex justify-content-center align-items-center">
         {children}
-      </div>
+      </span>
     </button>
   );
 };

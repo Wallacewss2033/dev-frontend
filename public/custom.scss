@@ -4,6 +4,7 @@ $success: #9AC31C;
 $info: #16BECF;
 $white: #FFFFFF;
 $link-color: #16BECF;
+$danger: #dc3545;
 
 $theme-colors: (
   "primary":    $primary,
@@ -11,10 +12,11 @@ $theme-colors: (
   "info":       $info,
   "white":       $white,
   "link-color": $link-color,
+  "danger": $danger,
 );
 
 $custom-colors:();
 
-$theme-colors: map-merge($theme-colors , $custom-colors );
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import '../node_modules/bootstrap/scss/bootstrap';
