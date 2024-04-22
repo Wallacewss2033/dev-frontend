@@ -40,3 +40,7 @@ form i {
 .Toastify__toast-body svg {
   fill: #9AC31C; /* Define a cor do ícone */
 }
+
+form .form-label {
+  margin: 0;
+}
