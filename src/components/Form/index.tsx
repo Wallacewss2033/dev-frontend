@@ -13,6 +13,7 @@ const Form: React.FC = () => {
     email?: [string];
     name?: [string];
     phone?: [string];
+    selected?: [string];
     check?: [string];
   }
   const schemaCpf = z.object({
@@ -73,12 +74,17 @@ const Form: React.FC = () => {
   const [email, setEmail] = useState<string>();
   const [name, setName] = useState<string>();
   const [isChecked, setIsChecked] = useState<boolean>(false);
+  const [selected, setSelected] = useState<number>();
   const [errors, setErrors] = useState<formInterface>();
 
   let validateCpf = schemaCpf.safeParse({ cpf });
   let validatePhone = schemaPhone.safeParse({ phone });
   let validateEmail = schemaEmail.safeParse({ email });
   let validateName = schemaName.safeParse({ name });
+
+  const handleSelectChange = (event:any) => {
+    setSelected(event.target.value);
+  };
 
   const handleCpfChange = (event: any) => {
     setCpf(maskCpf(event));
@@ -114,6 +120,7 @@ const Form: React.FC = () => {
     setEmail('');
     setName('');
     setPhone('');
+    setSelected(0);
     setIsChecked(false);
   };
 
@@ -124,6 +131,12 @@ const Form: React.FC = () => {
     validateEmail.success,
     validateName.success,
     validatePhone.success,
+  ]);
+
+  useEffect(() => {
+    setSelected(selected);
+  }, [
+    selected,
   ]);
 
   const handleSubmit = (event: any) => {
@@ -141,6 +154,11 @@ const Form: React.FC = () => {
       return;
     }
 
+    if (!selected) {
+      setErrors({selected: ['Por favor, selecione uma opção.']});
+      return;
+    }
+
     api
       .post("/lead", data)
       .then((response) => {
@@ -154,16 +172,23 @@ const Form: React.FC = () => {
 
   return (
     <form className="row g-3">
+      <ToastContainer />
       <div className="col-md-12">
         <label className="form-label">
           Quando pretende iniciar o curso de Medicina?
         </label>
-        <select id="inputState" className="form-select">
-          <option selected>Selectione</option>
-          <option>...</option>
+        <select value={selected} onChange={handleSelectChange} className={`form-select col-8 ${errors?.selected ? "border border-danger" : ""}`}>
+          <option value="">Selectione</option>
+          <option value={1}>Janeiro</option>
+          <option value={6}>Julho</option>
         </select>
+        {errors?.selected && (
+          <span className="invalid-feedback d-flex row m-0">
+            {errors.selected[0]}
+          </span>
+        )}
       </div>
-      <ToastContainer />
+      
       <div className="col-md-12">
         <label className="form-label">CPF</label>
         <div className="d-flex align-items-center">
