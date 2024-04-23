@@ -38,3 +38,22 @@ header {
   z-index: 1000;
   width: 100%;
 }
+
+.nav-buttons {
+  justify-content: end;
+  width: 100%;
+}
+
+@media(max-width: 990px) {
+  .nav-buttons {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 150px;
+    padding-bottom: 10px;
+  }
+
+  .nav-items .navbar-nav{
+    align-items: start;
+    flex-direction: column;
+  }
+}
