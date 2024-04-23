@@ -15,7 +15,7 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-primary hy-100">
+      <nav className="navbar navbar-expand-lg bg-primary hy-100" data-bs-theme="dark">
         <div className="container-fluid bg-primary">
           <div className="m-4">
             <img className="logo" src={Logo} alt="Logo" />
