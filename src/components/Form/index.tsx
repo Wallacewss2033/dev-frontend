@@ -76,6 +76,7 @@ const Form: React.FC = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [selected, setSelected] = useState<number>();
   const [errors, setErrors] = useState<formInterface>();
+  const [sending, setSending] = useState<boolean>(false);
 
   let validateCpf = schemaCpf.safeParse({ cpf });
   let validatePhone = schemaPhone.safeParse({ phone });
@@ -149,6 +150,10 @@ const Form: React.FC = () => {
       phone,
     };
 
+    if (sending) {
+      return;
+    }
+
     if (!isChecked) {
       setErrors({ check: ["Você deve concordar com os termos e condições."] });
       return;
@@ -159,6 +164,8 @@ const Form: React.FC = () => {
       return;
     }
 
+    setSending(true);
+
     api
       .post("/lead", data)
       .then((response) => {
@@ -167,6 +174,8 @@ const Form: React.FC = () => {
       })
       .catch((errors) => {
         setErrors(errors.response.data.errors);
+      }).finally(() => {
+        setSending(false);
       });
   };
 
@@ -298,7 +307,7 @@ const Form: React.FC = () => {
       </div>
 
       <div className="col-12 d-flex justify-content-end">
-        <Button type="button" btnType="success" onClick={handleSubmit}>
+        <Button type="button" disabled={sending} btnType="success" onClick={handleSubmit}>
           <b>Prosseguir</b>
         </Button>
       </div>
