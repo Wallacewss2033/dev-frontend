@@ -63,20 +63,23 @@ const Footer: React.FC = () => {
                   return <NavItem key={index} text={item.text} />;
                 })}
               </ul>
-              Siga-nos
+            </div>
+
+            <div className="box-items-title">Siga-nos</div>
+            <div className="items-text">
               <ul>
-                <span>
+                <a className="icon-social-media" href="/#">
                   <i className="social-media-icon bi bi-facebook icon" />
-                  <NavItem text="Facebook" />
-                </span>
-                <span>
+                  <span>Facebook</span>
+                </a>
+                <a className="icon-social-media" href="/#">
                   <i className="social-media-icon bi bi-instagram icon" />
-                  <NavItem text="Instagram" />
-                </span>
-                <span>
+                  <span>Instagram</span>
+                </a>
+                <a className="icon-social-media" href="/#">
                   <i className="social-media-icon bi bi-youtube icon" />
-                  <NavItem text="Youtube" />
-                </span>
+                  <span>Youtube</span>
+                </a>
               </ul>
             </div>
           </div>
@@ -123,10 +126,18 @@ const Footer: React.FC = () => {
           </div>
           <div className="box-tree">
             <div className="box-sub-footer d-flex row-cols-4">
-              <p className="box-info-footer d-flex align-items-center justify-content-center">Política de Privacidade</p>
-              <p className="box-info-footer d-flex align-items-center justify-content-center">Política de Cookies</p>
-              <p className="box-info-footer d-flex align-items-center justify-content-center">Solicitação do titular de dados</p>
-              <p className="box-info-footer d-flex align-items-center justify-content-center">Notificação de Incidente</p>
+              <p className="box-info-footer d-flex align-items-center justify-content-center">
+                Política de Privacidade
+              </p>
+              <p className="box-info-footer d-flex align-items-center justify-content-center">
+                Política de Cookies
+              </p>
+              <p className="box-info-footer d-flex align-items-center justify-content-center">
+                Solicitação do titular de dados
+              </p>
+              <p className="box-info-footer d-flex align-items-center justify-content-center">
+                Notificação de Incidente
+              </p>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ import Form from "../../components/Form";
 
 const Home: React.FC = () => {
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%" }} className="mt-100">
       <Banner />
       <img className="image-designer" src={image} alt="designer" />
 

@@ -8,7 +8,7 @@ const Layout: React.FC = () => {
   return (
     <div>
       <Header/>
-      <main className="background-color-layout">
+      <main className="background-color-layout ">
         <div className="d-flex justify-content-center bg-white">
           <Outlet/>
         </div>
