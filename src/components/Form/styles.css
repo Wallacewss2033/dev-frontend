@@ -44,3 +44,10 @@ form i {
 form .form-label {
   margin: 0;
 }
+
+
+@media (max-width: 1127px) {
+  .box-form {
+    width: 100%;
+  }
+}

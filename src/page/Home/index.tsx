@@ -263,7 +263,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="box-testimonial">
-            <div className="d-flex row">
+            <div className="d-flex direction">
               <div className="col-4"></div>
               <div className="col-8">
                 <h1>
@@ -280,9 +280,9 @@ const Home: React.FC = () => {
             </div>
 
             <img
-              alt="teste01"
+              alt="student"
               src={dep}
-              style={{ position: "relative", top: -224 }}
+              className="img-testimonial"
             />
           </div>
           <div className="d-flex justify-content-center aling-item-center mb-100">

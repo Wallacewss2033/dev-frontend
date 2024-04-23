@@ -46,3 +46,10 @@
 .text-aquamarine {
   color: #8ce5e1;
 }
+
+@media (max-width: 1127px) {
+
+  .box-text .subtitle {
+    width: 80%;
+  }
+}

@@ -17,8 +17,7 @@ footer {
   justify-content: start;
   flex-direction: column;
   height: 394px;
-  width: 350px;
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.5);
   margin-top: 50px;
 }
 
@@ -27,7 +26,7 @@ footer {
   font-weight: 700;
   line-height: 21.6px;
   text-align: left;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .items-text {
@@ -97,7 +96,6 @@ footer ul li {
   line-height: 18px;
   text-align: left;
   color: rgba(255, 255, 255, 0.5);
-  ;
 }
 
 /* _________________________________________ */
@@ -109,7 +107,7 @@ footer ul li {
   text-align: left;
   margin: 0;
   padding: 0;
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .sub-footer {
@@ -126,4 +124,28 @@ footer ul li {
 .box-tree {
   padding-left: 90px;
   padding-right: 80px;
+}
+
+@media (max-width: 780px) {
+  .box-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .box-items-title {
+    width: 100%;
+  }
+  .items-text {
+    text-align: left;
+    width: 100%;
+  }
+
+  .box-center-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+  }
 }
