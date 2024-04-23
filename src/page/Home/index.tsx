@@ -285,7 +285,7 @@ const Home: React.FC = () => {
               style={{ position: "relative", top: -224 }}
             />
           </div>
-          <div className="d-flex justify-content-center aling-item-center">
+          <div className="d-flex justify-content-center aling-item-center mb-100">
             <Button btnType="outline-success" radius={25}>
               <span className="text-black">
                 <b>Leia mais depoimentos</b>

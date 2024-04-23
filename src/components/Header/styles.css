@@ -24,6 +24,17 @@
   font-size: 18px;
 }
 
-.navbar-nav button span{
+.navbar-nav button span {
   font-weight: 700;
+}
+
+header li a span {
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
