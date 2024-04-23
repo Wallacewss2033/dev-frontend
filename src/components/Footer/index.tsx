@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="sub-footer container-fluid d-flex justify-content-center align-items-center">
-        <div className="box-center-footer bg-info">
+        <div className="box-center-footer">
           <div className="box-sub-footer d-flex row-cols-3 align-items-center justify-content-between">
             <div className="d-flex align-items-center justify-content-center">
               <p className="box-info-footer">
